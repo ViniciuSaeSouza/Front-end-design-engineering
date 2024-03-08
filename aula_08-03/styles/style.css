@@ -1,36 +1,36 @@
 body {
-    background-color: rgb(53, 92, 94);
-    font-family: 'Courier New', Courier, monospace;
-
+  background-image: url("/aula_08-03/img/vampeta-na-g-magazine-1348607286095_956x500.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #fc8585;
+  background-position: center top;
 }
 
 h1 {
-    color: #040d29;
-    display: inline-block;
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-   
+  color: #040d29;
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
-
 p {
-    font-size: 1.5rem;
-    color: #ffffff;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-shadow: black;
 }
 
 #primeiro {
-    color: red;
+  color: red;
 }
 
 .noticia {
-    color: rgba(164, 240, 164, 0.397);
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
+  color: rgba(164, 240, 164, 0.397);
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
 }
-
- */
