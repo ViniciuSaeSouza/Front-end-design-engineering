@@ -23,12 +23,14 @@ p {
 }
 
 #primeiro {
-    color: #ff0000;
+    color: red;
 }
 
 .noticia {
-    color: rgb(164, 240, 164);
+    color: rgba(164, 240, 164, 0.397);
     width: 50%;
     margin: 0 auto;
     text-align: center;
 }
+
+ */
