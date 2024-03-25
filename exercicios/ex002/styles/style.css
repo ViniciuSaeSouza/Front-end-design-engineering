@@ -8,6 +8,8 @@
 header{
     display: flex;
     background-color: black;
+    align-items: center;
+    
 }
 
 .header-logo,
@@ -19,13 +21,12 @@ header{
 .header-logo {
     max-width: 200px;
     max-height: 200px;
-    margin-right: 0 auto;
+    
+    
 }
 
-.header-text {
+header > h1 {
     display: flex;
-    justify-content: center;
-    margin: 0  auto; /* texto está sendo empurrado pela imagem*/
     color: azure;
+    margin: 0 auto;
 }
-
