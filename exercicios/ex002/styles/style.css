@@ -1,0 +1,31 @@
+/* Reset geral */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    background-color: black;
+}
+
+.header-logo,
+.header-text{
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    max-width: 200px;
+    max-height: 200px;
+    margin-right: 0 auto;
+}
+
+.header-text {
+    display: flex;
+    justify-content: center;
+    margin: 0  auto; /* texto está sendo empurrado pela imagem*/
+    color: azure;
+}
+
