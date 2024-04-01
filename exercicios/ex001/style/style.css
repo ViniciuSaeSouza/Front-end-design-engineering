@@ -1,3 +1,132 @@
-.imagem {
-    width: 100%;
+/* Import de fontes */
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/* Definição das font-familys importadas em duas variáveis para título e outra para texto */
+:root {
+  --fonte-titulo: "IBM Plex Sans", sans-serif;
+  --fonte-texto: "Hind", sans-serif;
+}
+
+/* Reset Geral */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(41, 41, 41);
+  text-align: center;
+  color: #dfdede;
+  margin: 0 auto;
+}
+
+h1, h2, img, p, ul,a {
+    margin: 1rem 0px;
+}
+
+h1,
+h2 {
+  font-family: var(--fonte-titulo);
+}
+
+p,
+a {
+  font-family: var(--fonte-texto);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+    text-indent: 1.5rem;
+    text-wrap: wrap;
+    width: 60%;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 12%;
+}
+
+.home__logo {
+  width: 200px;
+  border-radius: 10px;
+}
+
+/* Estilização lista de cursos - home page */
+ul {
+  list-style: none;
+  width: 400px;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+li {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-align: center;
+    
+}
+
+.li__ads {
+  color: #38b0d9;
+}
+
+.li__adm {
+  color: #38D997;
+}
+
+.li__banco-dados {
+  color: #DBD12F;
+}
+
+.li__eng-comp {
+  color: #DB4839;
+}
+
+.li__eng-prod {
+  color: #DB7B2E;
+}
+
+.li__eng-meca {
+  color: #9A14DB;
+}
+
+.li__gestao-ti {
+  color: #1F64DB;
+}
+
+.li__jogos-dg {
+  color: #3ADC01;
+}
+
+.li__sist-info {
+  color: rgb(193, 73, 230);
+}
+
+.li__sist-internet {
+  color: #e23d8a;
+}
+.li__rede-comp {
+  color: #37C3DB;
+}
+
+.link__favoritos{
+    text-align: center;
+    color: #DB3783;
+}
+
+.link__favoritos > p {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
