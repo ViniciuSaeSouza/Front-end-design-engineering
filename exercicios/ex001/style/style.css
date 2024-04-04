@@ -9,9 +9,9 @@
 
 /* Reset Geral */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -65,7 +65,7 @@ h2 {
 
 /* Estilização lista de cursos - home page */
 ul {
-  list-style: none;
+  list-style: disc;
   width: 400px;
   margin: 1.5rem auto;
   text-align: center;
