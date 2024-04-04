@@ -65,7 +65,7 @@ h2 {
 
 /* Estilização lista de cursos - home page */
 ul {
-  list-style: disc;
+  list-style: none;
   width: 400px;
   margin: 1.5rem auto;
   text-align: center;
