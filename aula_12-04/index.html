@@ -43,7 +43,44 @@
         <fieldset>
             <legend>Valores</legend>
             <label for="id_quant">Quatidade</label>
-            <input type="number" name="quant" id="id_quant" min="0" max="10">
+            <input type="number" name="quant" id="id_quant" step="2" min="0" max="10"> <br>
+
+            <label for="id_volume">Volume: </label>
+            <input type="range" name="volume" id="id_volume"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Tamanho</legend>
+            
+            <input type="radio" name="tamanho" id="id_peq" value="P">
+            <label for="id_peq">Pequeno</label>
+
+            <input type="radio" name="tamanho" id="id_med" value="M">
+            <label for="id_med">Medio</label>
+
+            <input type="radio" name="tamanho" id="id_grd" value="G">
+            <label for="id_grd">Grande</label>
+        </fieldset>
+        <fieldset>
+            <legend>Cores</legend>
+            <input type="checkbox" name="cor" id="id_azul">
+            <label for="id_azul">Azul</label><br>
+
+            <input type="checkbox" name="cor" id="id_vermelho">
+            <label for="id_vermelho">Vermelho</label><br>
+
+            <input type="checkbox" name="cor" id="id_verde">
+            <label for="id_verde">Verde</label><br>
+
+        </fieldset>
+        <fieldset>
+            <legend>Locais de compra</legend>
+            <label id="id_uf">Estados</label>
+            <select name="estado" id="id_uf">
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de janeiro</option>
+                <option value="MG">Minas Gerais</option>
+            </select>
+            
         </fieldset>
         <input type="submit" value="Cadastrar">
     </form>
