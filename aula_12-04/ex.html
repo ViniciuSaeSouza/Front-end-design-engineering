@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Forms</title>
+</head>
+<body>
+    <form action="Cadastrar" method="get" name="preferencias">
+        <fieldset>
+            <label for="id_nome">Nome: </label>
+            <input type="text" name="nome" id="id_nome"><br>
+
+            <label for="id_email">E-mail: </label>
+            <input type="email" name="email" id="id_email"><br>
+
+            <label for="id_cor">Cor favorita: </label>
+            <select name="cor" id="id_cor">
+                <option value="" selected>Selecione uma cor</option>
+                <option value="azul">Azul</option>
+                <option value="preto">Preto</option>
+                <option value="vermelho">Vermelho</option>
+                <option value="verde">Verde</option>
+                <option value="amarelo">Amarelo</option>
+                <option value="branco">Branco</option>
+            </select>
+        </fieldset>
+    </form>
+</body>
+</html>
