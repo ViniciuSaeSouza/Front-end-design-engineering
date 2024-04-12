@@ -14,7 +14,7 @@
             <input type="text" name="nome" id="id_nome"><br>
 
             <label for="id_senha">Senha: </label>
-            <input type="password" name="senha" id="id_senha"><br>
+            <input type="password" name="senha" id="id_senha" maxlength="10" minlength="5"><br>
 
             <label for="id_email">E-mail: </label>
             <input type="email" name="email" id="id_email"><br>
@@ -76,11 +76,21 @@
             <legend>Locais de compra</legend>
             <label id="id_uf">Estados</label>
             <select name="estado" id="id_uf">
-                <option value="SP">São Paulo</option>
-                <option value="RJ">Rio de janeiro</option>
-                <option value="MG">Minas Gerais</option>
+                <option value="" selected disabled>Selecione um estado</option>
+                <optgroup label="Sudeste">
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                </optgroup>
+                <optgroup label="Sul">
+                    <option value="RS">Rio grande do Sul</option>
+                    <option value="PR">Paraná</option>
+                </optgroup>
             </select>
-            
+        </fieldset>
+        <fieldset>
+            <legend>Observações</legend>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
         </fieldset>
         <input type="submit" value="Cadastrar">
     </form>
