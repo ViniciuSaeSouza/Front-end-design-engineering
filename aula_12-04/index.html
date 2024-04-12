@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+</head>
+<body>
+    <h1>Formulários</h1>
+    <form action="cadastro" method="get">
+        <fieldset>
+            <legend>Dados pessoais</legend> <!-- Legend sempre atrelado ao fieldset-->
+            <label for="id_nome">Nome: </label> 
+            <input type="text" name="nome" id="id_nome"><br>
+
+            <label for="id_senha">Senha: </label>
+            <input type="password" name="senha" id="id_senha"><br>
+
+            <label for="id_email">E-mail: </label>
+            <input type="email" name="email" id="id_email"><br>
+
+            <label for="id_busca">Busca: </label>
+            <input type="search" name="busca" id="id_busca"> <br>
+
+            <label for="id_site">Site: </label>
+            <input type="url" name="site" id="id_site"> <br>
+
+            <label for="id_data">Data: </label>
+            <input type="date" name="data" id="id_data"><br>
+
+            <label for="id_hora">Hora: </label>
+            <input type="time" name="hora" id="id_hora"><br>
+
+            <label for="id_reuniao">Reunião: </label>
+            <input type="datetime-local" name="reuniao" id="id_reuniao"><br>
+
+            <label for="id_mes">Mês: </label>
+            <input type="month" name="mes" id="id_mes"> <br>
+
+            <label for="id_semana">Semana</label>
+            <input type="week" name="Semana" id="id_semana">
+        </fieldset>
+        <fieldset>
+            <legend>Valores</legend>
+            <label for="id_quant">Quatidade</label>
+            <input type="number" name="quant" id="id_quant" min="0" max="10">
+        </fieldset>
+        <input type="submit" value="Cadastrar">
+    </form>
+</body>
+</html>
