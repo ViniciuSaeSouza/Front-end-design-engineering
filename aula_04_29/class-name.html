@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Name</title>
+    
+  </head>
+  <body>
+    <h1>Class name</h1>
+
+    <p>Primeiro: <span class="corredor"></span></p>
+    <p>Segundo: <span class="corredor"></span></p>
+    <p>Terceiro: <span class="corredor"></span></p>
+
+    Novo Classificado: <input type="text" id="novo"><br>
+    Posição: <input type="number" id="posicao" min="1" max="3">
+    <button onclick="inserir()">Inserir</button>
+    
+    <script>
+        let botoes = document.getElementsByClassName("btn")
+        function inserir(){
+            let numero = document.getElementById("posicao").value - 1
+            let novo = document.getElementById("novo").value
+            document.getElementsByClassName('corredor')[numero].innerHTML = novo
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAG NAME</title>
+</head>
+<body>
+    <h1>Exemplo por TagName</h1>
+    <ul>
+        <li>Janeiro</li>
+        <li>Fevereiro</li>
+        <li>Março</li>
+        <li>Abril</li>
+        <li>Maio</li>
+    </ul>
+
+    Escolha um mês: <input type="number" id="numero" min='1' max="5">
+    <button onclick="mostrar()">Mostrar</button>
+    <p>Mês escolhido: <span id="resultado"></span></p>
+    <script>
+        function mostrar(){
+            let num = document.getElementById('numero').value - 1
+            let mes = document.getElementsByTagName('li')[num].innerHTML
+            document.getElementById('resultado').innerHTML = mes
+        }
+    </script>
+</body>
+</html>
