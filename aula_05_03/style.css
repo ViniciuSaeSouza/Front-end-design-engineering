@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box1{
+    width: 500px;
+    height: 200px;
+    background-color: blueviolet;
+}
+
+.box2 {
+    width: 40%;
+    height: 200px;
+    background-color: chocolate;
+}
+
+html {
+    font-size: 20px
+}
+
+header{
+    font-size: 20px;
+}
+
+
+h1{
+    /* font-size: 2.5em;  Medida basebada no elemento pai (2.5 * 16px)*/
+    /* font-size: 2.5rem; Proporção em relação ao elemento raiz*/
+    font-size: 4vw;
+}
