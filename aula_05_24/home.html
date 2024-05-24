@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Página Principal</h1>
+    <button id="abrir">Login</button>
+    
+    <dialog id="boxLogin">
+        <h2>Login</h2>
+        <input type="text" id="user" placeholder="Usuário"><br>
+        <input type="text" id="pass" placeholder="Senha"><br>
+        <button id="login">Logar</button>
+        <button id="cadastrar">Cadastrar</button>
+        <span id="fechar">Cancelar</span>
+    </dialog>
+    <dialog id="boxCadastrar">
+        <h2>Cadastrar</h2>
+        <input type="text" id="cadUser" placeholder="Usuário"><br>
+        <input type="text" id="cadPass" placeholder="Senha"><br>
+        <button id="btnCadastrar">Cadastrar</button><br>
+        <span id="cadFechar">Cancelar</span>
+    </dialog>
+
+    <script>
+        const btnAbrir = document.querySelector('#abrir')
+        const btnFechar = document.querySelector('#fechar')
+        const boxLogin = document.querySelector('#boxLogin')
+        const usuario = document.querySelector('#user')
+        const senha = document.querySelector('#pass')
+        const btnLogin = document.querySelector('#login')
+        const btnCadastrar = document.querySelector('#cadastrar')
+        const boxCadastrar = document.querySelector('#boxCadastrar')
+        const cadUser = document.querySelector('#cadUser')
+        const cadPass = document.querySelector('#cadPass')
+        const btnGravarCad = document.querySelector('#btnCadastrar')
+
+        btnAbrir.addEventListener('click', () => {
+            boxLogin.setAttribute('open', '')
+        });
+
+        btnFechar.addEventListener('click', ()=>{
+            boxLogin.removeAttribute('open')
+        })
+
+        btnLogin.addEventListener('click', () =>{
+            if (usuario.value == '' || senha.value == ''){
+                alert('Preencha os campos')
+            }else if (usuario.value == 'Luis' && senha.value == '1234'){
+                sessionStorage.setItem('user', usuario.value)
+                location = 'formulario.html'
+            }else{
+                usuario.value = ''
+                senha.value = ''
+                alert('Usuário ou senha incorretas!')
+            }
+        })
+
+        btnCadastrar.addEventListener('click', () =>{
+            boxLogin.removeAttribute('open')
+            boxCadastrar.setAttribute('open', '')
+        })
+
+        btnGravarCad.addEventListener('click', () =>{
+            if(localStorage.getItem('listaUsers') == null){
+                let listaUsers = []
+                localStorage.setItem('listaUsers', JSON.stringify(listaUsers))
+            }
+
+            const novo = {
+                usuario: cadUser.value,
+                senha: cadPass.value
+            }
+
+            let listaUsers = JSON.parse(localStorage.getItem('listaUsers'))
+
+            listaUsers = [...listaUsers, novo]
+
+            localStorage.setItem('listaUsers', JSON.stringify(listaUsers))
+        })
+    </script>
+
+</body>
+</html>

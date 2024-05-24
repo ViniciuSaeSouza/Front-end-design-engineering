@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<p>
+    <p>Olá <span id="user"></span>, aproveite nossas ofertas</p>
+    <h1>Formulário</h1>
+
+
+    <script>
+        document.querySelector('#user').innerHTML = sessionStorage.getItem('user')
+    </script>
+</body>
+</html>
