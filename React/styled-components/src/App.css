@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* font-family: "Open Sans", sans-serif; */
+
+#root {
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: aliceblue;
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 0 auto;
+  letter-spacing: 0.3rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  
+}
+
+p{
+  font-size: 1.5rem;
+}
+
+.detalhes{
+  max-width: 800px;
+  display: flex;
+  margin: 1.5rem auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding-left: 5rem;
+}
+
+.detalhes > span{
+  font-size: 1.6rem;
+  margin: 0 5rem;
+}
+
+.detalhes > span:nth-child(1){
+  color: #C54B3E;
+}
+.detalhes > span:nth-child(2){
+  color: #FFD800;
+}
+.detalhes > span:nth-child(2){
+  color: #1B6193;
+}
+
+
+span {
+  color: #ffd90096;
+}
+
+img{
+  max-width: 800px;
+  border-radius: 0px;
+  border: 1px solid rgb(146, 146, 146);
+  border-radius: 5px;
+}
+
+.titulo-lista{
+  font-size: 2rem;
+}
+
+ol{
+  font-size: 1.7rem;
+  display: inline-block;
+  margin: 0 auto;
+  margin-right: 1rem;
+}
+
+li{
+  text-align: center;
+  margin: 0.5rem 0px;
+}
+
+footer{
+  display: inline;
+  padding: 0;
+}
+
+footer > p {
+  border-top: 1px solid white;
+  font-size: 1.2rem;
+  margin: 1rem auto 0;
+  padding-top: 0.5rem;
+  max-width: 100vw;
+}
+
