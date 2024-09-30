@@ -1,27 +1,129 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body{
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.cabecalho{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+
+  .logo img {
+      border-radius: 50%;
+  }
+
+  .nav {
+      flex-grow: 1;
+      display: flex;
+      justify-content: left;
+      padding: 20px;
+      margin: 20px;
+  }
+
+  .nav ul{
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  .nav li {
+      margin: 0 15px;
+  }
+
+  .nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+  }
+
+}
+
+.cardContainer{
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  
+  margin-top: 30px;
+
+  .card{
+    border: 3px solid #333;
+    text-align: center;
+    min-width: 20%;
+    padding: 10px;
+    border-radius: 10px;
+
+    h3{
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    img{
+      border-radius: 2px;
+    }
+
+    p{
+      padding: 6px;
+      font-size: 16px;
+    }
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+
+.rodape{
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 200px;
+  
+
+  .integrantes {
+      margin-top: 15px;
+  }
+
+  .lista-integrantes {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+
+  .lista-integrantes span {
+      margin: 0 10px;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+
+.cardPedido{
+  background-color: #ADD8E6;
+  border: 2px solid #333;
+  box-shadow: 5px 5px 5px #333;
+  padding: 20px;
+  text-align: center;
+  width: 350px;
+  height: 200px;
+  margin: 10px;
+  position: relative;
+ 
+  h2, p {
+    padding-bottom: 10px;
+ 
+  }
+  button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+ 
   }
 }
