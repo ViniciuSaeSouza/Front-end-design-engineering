@@ -1,16 +1,15 @@
+import { useEffect } from 'react';
 import './App.css';
 import Corpo from './Components/Corpo';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
-import Exemplo from './Components/Exemplo';
-function App() {
 
+function App() {
   return (
     <>
-      {/* <Header/>
+      <Header/>
       <Corpo/>
-      <Footer/> */}
-      <Exemplo/>
+      <Footer/>
     </>
   )
 }
