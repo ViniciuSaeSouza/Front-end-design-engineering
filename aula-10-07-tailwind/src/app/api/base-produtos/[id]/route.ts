@@ -11,3 +11,8 @@ export async function GET(request:Request, {params}:{params:{id:number}}){
     return NextResponse.json(produto);
 }
 
+
+export async function PUT(request:Request, {params}:{params:{id:number}}) {
+    
+}
+
