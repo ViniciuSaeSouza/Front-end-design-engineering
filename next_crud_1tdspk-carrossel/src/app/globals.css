@@ -6,6 +6,11 @@ body{
   @apply flex flex-col min-h-screen
 }
 
+
+body {
+  display: ;
+}
+
 .links li a{
   @apply text-white text-xl
 }
