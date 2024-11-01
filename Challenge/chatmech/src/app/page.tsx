@@ -9,7 +9,8 @@ import imgCard1 from '@/images/img-card-1.png'
 import imgCard2 from '@/images/img-card-2.png'
 import imgCard3 from '@/images/img-card-3.png'
 import ImgCard from "@/components/ImgCard/ImgCard";
-import { list } from "postcss";
+import iconCheckbox from "@/images/check_box.png"
+
 
 export default function Home() {
 
@@ -63,7 +64,7 @@ export default function Home() {
   const listInfo = [
     {
       titulo: "Agilidade: Obtenha um diagnóstico rápido.",
-      descricao: "Com o nosso sistema, você pode se conectar rapidamente ao nosso assistente e realizar um diagnósticobreve do problema do seu veículo, sem a necessidade de passar por processos complexos e, o melhor de tudo,    sem sair do conforto de casa."
+      descricao: "Com o nosso sistema, você pode se conectar rapidamente ao nosso assistente e realizar um diagnóstico breve do problema do seu veículo, sem a necessidade de passar por processos complexos e, o melhor de tudo, sem sair do conforto de casa."
     },
     {
       titulo: "Oportunidade: Valorize sua mecânica.",
@@ -85,29 +86,40 @@ export default function Home() {
 
   return (
     <>
+
+      {/* Banner 1 */}
       <Banner imgSrc={banner1.src} alt={banner1.alt} estilo={banner1.estilo} texto={banner1.texto} estiloTexto={banner1.estiloTexto} />
+    
+      {/* Card de informações */}
       <div className="flex justify-center space-x-20">
         {dataCards.map( (v,i) => (
           <Card key={i}  rota={v.rota} titulo={v.titulo} descricao={v.descricao} textoLink={v.textoLink}/>
         ))}
       </div>
+      {/* Banner 2 */}
       <Banner imgSrc={banner2.src} alt={banner2.alt} estilo={banner2.estilo} texto={banner2.texto} estiloTexto={banner2.estiloTexto}/>
-      <div className="flex mt-20 mb-32 space-x-20 justify-center">
+
+      {/* Card de imagens */}
+      <div className="flex mt-20 mb-32 space-x-20 justify-center flex-shrink-2">
         {imagensCard.map((v,i) => (
           <ImgCard key={i} imgSrc={v} />
         ))}
       </div>
-      <div className="grid grid-cols-3 grid-rows-2">
-        <h3 className="text-4xl font-roboto text-blue_2 col-span-1 ml-16 row-span-1">Vantagens de Usar nossos Serviços</h3>
-        <div className="col-span-2 row-span-2 ">
-          <ul className="list-inside list-disc">
-            {listInfo.map((v, i) => (
-              <li key={i}>
-                <p className="font-roboto font-bold ">{v.titulo}</p>
-                <p>{v.descricao}</p>
-              </li>
-            ))}
-          </ul>
+
+
+      {/* Section vantagens */}
+      <div className="grid grid-cols-3 grid-rows-1 mb-20">
+        <h3 className="text-5xl font-semibold leading-relaxed font-roboto text-blue_2 ml-16">Vantagens de Usar nossos Serviços</h3>
+        <div className="col-span-2 flex justify-around flex-wrap gap-y-10 max-w-[80%]">
+          {listInfo.map((v, i) => (
+            <div key={i} className="flex items-start max-w-[350px]">
+              <Image src={iconCheckbox} alt="ícone de um check box"/>
+              <div>
+                <p className="font-bebas font-semibold text-base">{v.titulo}</p>
+                <p className="opacity-70 font-thin text-[14px] mt-4">{v.descricao}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>
