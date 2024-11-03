@@ -4,6 +4,8 @@ import React, { FormEvent, useState } from "react";
 import "../globals.css";
 import { ClienteType, LoginType } from "@/types/type";
 import { useRouter } from "next/navigation";
+import Cabecalho from "@/components/Cabecalho/Cabecalho";
+import Footer from "@/components/Footer/Footer";
 
 export default function Login() {
     const navigate = useRouter();
@@ -59,6 +61,8 @@ export default function Login() {
     const styleInput =
         "relative border-2 border-black/20 rounded-xl p-3 text-xl w-[100%] mt-3";
     return (
+		<>
+		<Cabecalho/>
         <div className="max-w-xl mx-auto">
             <h1 className="font-inter text-5xl mt-6 mb-8 text-center">
                 Acessar Conta
@@ -102,5 +106,7 @@ export default function Login() {
                 </Link>
             </form>
         </div>
+		<Footer/>
+		</>
     );
 }

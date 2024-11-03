@@ -17,3 +17,11 @@ body {
 .cadastro_links {
   @apply text-blue_3 decoration-solid underline underline-offset-4 max-w-fit
 }
+
+.titulo_login {
+  @apply font-inter text-5xl mt-6 mb-8 text-center
+}
+
+.home_nav {
+  @apply font-medium hover:bg-blue_1 hover:rounded-lg hover:text-white hover:py-1 hover:px-2
+}
