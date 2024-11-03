@@ -19,16 +19,16 @@ export default function Cadastro() {
         setCliente({ ...cliente, [name]: value });
     };
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLButtonElement>) => {
         e.preventDefault();
         const cabecalho = {
             method: "POST",
-            headers: { "Content-type": "application/json" },
+            headers: { "Content-type" : "application/json" },
             body: JSON.stringify(cliente),
         };
         try {
             const response = await fetch(
-                "http://localhost:8080/cadastro",
+                "http://localhost:8080/cadastro/",
                 cabecalho
             );
 
@@ -53,7 +53,7 @@ export default function Cadastro() {
                 Cadastre-se
             </h1>
 
-            <form className="border-2 px-4 py-4" onSubmit={handleSubmit}>
+            <form className="border-2 px-4 py-4">
                 <div>
                     <label className={styleLabel} htmlFor="idNome">
                         Nome
@@ -121,7 +121,7 @@ export default function Cadastro() {
 
                 <button
                     className="bg-blue_1 border-2 border-blue_1 text-white text-xl rounded-lg w-[100%] py-2 hover:bg-white hover:border-2 hover:text-black"
-                    type="submit"
+                    type="submit" onSubmit={(e) => handleSubmit(e)}
                 >
                     CADASTRAR
                 </button>
