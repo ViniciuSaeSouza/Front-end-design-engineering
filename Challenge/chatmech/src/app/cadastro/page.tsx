@@ -128,7 +128,7 @@ export default function Cadastro() {
                     CADASTRAR
                 </button>
 
-                <Link className="cadastro_links" href={"/recuperar"}>Esqueci minha senha</Link>
+                <Link className="cadastro_links" href={"/cadastro/recuperar"}>Esqueci minha senha</Link>
             </form>
 
         </div>
