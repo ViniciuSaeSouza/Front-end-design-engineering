@@ -12,7 +12,7 @@ export default function Cabecalho() {
 		</div>
 		<div className='me-24 text-lg flex space-x-10 items-center'>
 			<Link className='font-medium' href={'/'}>ENTRAR</Link>
-			<Link className='bg-blue_1 text-background drop-shadow-sm py-2 px-3 rounded-3xl' href={'/'}>CADASTRE-SE</Link>
+			<Link className='bg-blue_1 text-background drop-shadow-sm py-2 px-3 rounded-3xl' href={'/cadastro'}>CADASTRE-SE</Link>
 		</div>
 	</header>
   )

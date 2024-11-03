@@ -55,7 +55,7 @@ export default function Home() {
         Gostaria de conhecer mais? <br />
         <span className='text-blue_3 leading-relaxed'>Cadastra-se</span> e acesse sua área do cliente.
         <button className="border-white border-2 text-center rounded-xl p-2 mt-8 text-xl relative max-w-[60%] hover:bg-background hover:text-blue_1">
-          <Link href={'/'}>Quero me cadastrar</Link>
+          <Link href={'/cadastro'}>Quero me cadastrar</Link>
         </button>
       </>,
       estiloTexto : "font-roboto text-background text-3xl max-w-[500px] pl-28 leading-relaxed"

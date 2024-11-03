@@ -12,7 +12,7 @@ const config: Config = {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
         bebas: ["Bebas Neue", "sans-serif"],
-        
+        inter: ["Inter", "sans-serif"]
       },
       colors: {
         background: "#F8F9FA",

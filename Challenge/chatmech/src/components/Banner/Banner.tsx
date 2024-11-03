@@ -19,10 +19,3 @@ export default function Banner({imgSrc, alt, estilo, texto, estiloTexto}:BannerT
 	</section>
   )
 }
-
-
-// 
-
-// "font-roboto text-background text-3xl max-w-[500px] pl-28 leading-normal"
-
-// "font-roboto text-background text-4xl max-w-[500px] pl-28 leading-relaxed" 

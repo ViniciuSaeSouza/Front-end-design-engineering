@@ -7,7 +7,7 @@ type ImgCardType = {
 export default function ImgCard({imgSrc}:ImgCardType) {
   return (
 	<>
-		<Image  src={imgSrc} alt='teste' />	
+		<Image  src={imgSrc} alt='Pessoa legal' />	
 	</>
   );
 }
