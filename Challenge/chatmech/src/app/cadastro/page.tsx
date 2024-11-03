@@ -9,6 +9,7 @@ export default function Cadastro() {
     const navigate = useRouter();
 
     const [cliente, setCliente] = useState<ClienteType>({
+        idCadastro: 0,
         nome: "",
         email: "",
         senha: "",
@@ -35,7 +36,7 @@ export default function Cadastro() {
             console.log(response)
             if (response.ok) {
                 alert(`${cliente.nome} cadastrado com sucesso!`);
-                setCliente({ nome: "", email: "", senha: "", cep: "" });
+                setCliente({idCadastro:0, nome: "", email: "", senha: "", cep: "" });
                 navigate.push("/");
             } else {
                 alert("Erro ao cadastrar!");
@@ -78,7 +79,7 @@ export default function Cadastro() {
                     <br />
                     <input
                         className={styleInput}
-                        type="text"
+                        type="email"
                         name="email"
                         id="idEmail"
                         value={cliente.email}
@@ -121,13 +122,13 @@ export default function Cadastro() {
                 </div>
 
                 <button
-                    className="bg-blue_1 border-2 border-blue_1 text-white text-xl rounded-lg w-[100%] py-2 mt-4 hover:bg-white hover:border-2 hover:text-black"
+                    className="button_submit"
                     type="submit"
                 >
                     CADASTRAR
                 </button>
 
-                <Link className="text-blue_3 decoration-solid underline underline-offset-4 max-w-fit hover:" href={"/recuperar"}>Esqueci minha senha</Link>
+                <Link className="cadastro_links" href={"/recuperar"}>Esqueci minha senha</Link>
             </form>
 
         </div>

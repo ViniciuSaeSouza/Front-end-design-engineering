@@ -11,7 +11,7 @@ export default function Cabecalho() {
 			<Link href={"/"}><h1 className='text-[#1A7BA0] text-5xl'>ChatMech</h1></Link>
 		</div>
 		<div className='me-24 text-lg flex space-x-10 items-center'>
-			<Link className='font-medium' href={'/'}>ENTRAR</Link>
+			<Link className='font-medium' href={'/login'}>ENTRAR</Link>
 			<Link className='bg-blue_1 text-background drop-shadow-sm py-2 px-3 rounded-3xl' href={'/cadastro'}>CADASTRE-SE</Link>
 		</div>
 	</header>
