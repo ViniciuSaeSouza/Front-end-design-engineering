@@ -1,6 +1,7 @@
 "use client";
 import { ClienteType } from "@/types/type";
 import { headers } from "next/headers";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
@@ -19,19 +20,19 @@ export default function Cadastro() {
         setCliente({ ...cliente, [name]: value });
     };
 
-    const handleSubmit = async (e: React.FormEvent<HTMLButtonElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const cabecalho = {
             method: "POST",
-            headers: { "Content-type" : "application/json" },
+            headers: { "Content-Type" : "application/json" },
             body: JSON.stringify(cliente),
         };
         try {
             const response = await fetch(
-                "http://localhost:8080/cadastro/",
+                "http://localhost:8080/cadastro",
                 cabecalho
             );
-
+            console.log(response)
             if (response.ok) {
                 alert(`${cliente.nome} cadastrado com sucesso!`);
                 setCliente({ nome: "", email: "", senha: "", cep: "" });
@@ -45,15 +46,15 @@ export default function Cadastro() {
     };
 
     const styleInput =
-        "relative border-2 border-black/30 rounded-md p-3 text-xl w-[100%] mt-2 mb-4";
+        "relative border-2 border-black/30 rounded-md p-3 text-xl w-[100%] mt-3";
     const styleLabel = "font-roboto text-2xl";
     return (
-        <div className="max-w-4xl mx-auto">
-            <h1 className="font-inter text-5xl mt-14 mb-8 text-center">
+        <div className="max-w-3xl mx-auto">
+            <h1 className="font-inter text-5xl mt-6 mb-8 text-center">
                 Cadastre-se
             </h1>
 
-            <form className="border-2 px-4 py-4">
+            <form className="border-2 px-8 py-10 rounded mb-14 flex flex-col gap-10" onSubmit={(e) => handleSubmit(e)}>
                 <div>
                     <label className={styleLabel} htmlFor="idNome">
                         Nome
@@ -114,18 +115,21 @@ export default function Cadastro() {
                         id="idCep"
                         value={cliente.cep}
                         onChange={handleChange}
-                        placeholder="xxxxx-xx"
+                        placeholder="xxxxxxx"
                         required
                     />
                 </div>
 
                 <button
-                    className="bg-blue_1 border-2 border-blue_1 text-white text-xl rounded-lg w-[100%] py-2 hover:bg-white hover:border-2 hover:text-black"
-                    type="submit" onSubmit={(e) => handleSubmit(e)}
+                    className="bg-blue_1 border-2 border-blue_1 text-white text-xl rounded-lg w-[100%] py-2 mt-4 hover:bg-white hover:border-2 hover:text-black"
+                    type="submit"
                 >
                     CADASTRAR
                 </button>
+
+                <Link className="text-blue_3 decoration-solid underline underline-offset-4 max-w-fit hover:" href={"/recuperar"}>Esqueci minha senha</Link>
             </form>
+
         </div>
     );
 }

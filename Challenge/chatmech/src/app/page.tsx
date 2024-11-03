@@ -18,7 +18,7 @@ export default function Home() {
 // Rota, Título, Descrição e TextoLink dos 3 cards
   const dataCards = [
     {
-      rota:"/", 
+      rota:"/cadastro", 
       titulo: "Crie uma conta",
       descricao: "Cadastre-se e tenha acesso completo aos nossos serviços!",
       textoLink: "Quero me cadastrar!"
