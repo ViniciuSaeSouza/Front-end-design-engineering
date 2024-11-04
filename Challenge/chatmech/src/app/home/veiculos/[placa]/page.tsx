@@ -3,14 +3,28 @@ import CabecalhoLogin from '@/components/CabecalhoLogin/CabecalhoLogin';
 import Footer from '@/components/Footer/Footer';
 import { VeiculoType } from '@/types/type'
 import { useRouter } from 'next/navigation';
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image"
 
-export default function EditarVeiculo({params}:{params:{placa:string}}){
-	const navigate = useRouter();
-	const {placa} = params;
 
-    const [veiculo, setVeiculo] = useState<VeiculoType>({
+
+interface EditarVeiculoProps {
+    params: Promise< {
+        placa: string
+    }>;
+}
+export default function EditarVeiculo({params}:EditarVeiculoProps){
+	const navigate = useRouter();
+	
+	const [placa, setPlaca] = useState<string>("");
+
+	useEffect(() => {
+		params.then(p => {
+			setPlaca(p.placa);
+		});
+	}, [params]);
+    
+	const [veiculo, setVeiculo] = useState<VeiculoType>({
         fabricante: '',
         modelo: '',
         quilometragem: 0,
@@ -28,7 +42,6 @@ export default function EditarVeiculo({params}:{params:{placa:string}}){
 			
         }
         chamadaApi()
-		console.log(veiculo)
     }, [placa])
 
     //Função para armazenar os dados digitados pelo usuário no obj veiculo
@@ -57,9 +70,9 @@ export default function EditarVeiculo({params}:{params:{placa:string}}){
     }
 
     // Estilos dos elementos
-	let spanStyle = "text-blue_1 text-3xl mr-2";
-	let inputStyle = "mt-2 h-14 w-[100%] outline-black/60 text-xl font-thin border-2 rounded-sm pl-4";
-	let labelStyle = "text-2xl";
+	const spanStyle = "text-blue_1 text-3xl mr-2";
+	const inputStyle = "mt-2 h-14 w-[100%] outline-black/60 text-xl font-thin border-2 rounded-sm pl-4";
+	const labelStyle = "text-2xl";
 
     return (
         <div className="flex flex-col min-h-screen">
