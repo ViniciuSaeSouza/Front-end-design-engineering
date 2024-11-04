@@ -43,14 +43,12 @@ export default function Login() {
             );
             if (response.ok) {
 				const usuario = await response.json();
-                // AQUELA TRETA GOSTOSA QUE VIMOS NA AULA ONLINE
                 const teste = usuario
                 setCliente(teste);
                 login(teste);
                 console.log(usuario)
                 console.log(user)
                 console.log(teste)
-                // ---------------------------------------------
                 navigate.push(`/home`);
             } else if (response.status == 400 || response.status == 404) {
                 alert("Email ou Senha Inválidos!");
